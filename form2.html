@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+  <title>Input Mouse Events</title>
+</head>
+<body>
+
+<input type="text" id="myInput" placeholder="Hover over me">
+
+<script>
+  const input = document.getElementById("myInput");
+
+  input.addEventListener("mouseenter", function () {
+    alert("Cursor entered the input field");
+  });
+
+  input.addEventListener("mouseleave", function () {
+    alert("Cursor left the input field");
+  });
+</script>
+
+</body>
+</html>

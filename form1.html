@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+  <title>Dropdown Alert</title>
+</head>
+<body>
+
+<h3>select programming language</h3>
+
+<select id="mySelect">
+  <option value="">-- Select an option --</option>
+  <option value="Java">Java</option>
+  <option value="Python">Python</option>
+  <option value="JavaScript">JavaScript</option>
+</select>
+
+<script>
+  document.getElementById("mySelect").addEventListener("change", function () {
+    alert("You selected: " + this.value);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Age Check</h3>
+
+<input type="number" id="age" placeholder="Enter age">
+<button onclick="checkAge()">Check</button>
+
+<p id="msg"></p>
+
+<script>
+function checkAge() {
+    var age = document.getElementById("age").value;
+
+    try {
+        if (age < 18) {
+            throw "Age is less than 18";
+        }
+        document.getElementById("msg").innerHTML = "Eligible";
+    }
+    catch (e) {
+        document.getElementById("msg").innerHTML = e;
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h3>Enter mobile number:</h3>
+<input type="text" id="mob">
+<button onclick="check()">Check</button>
+<p id="msg"></p>
+
+<script>
+function check() {
+  var m = document.getElementById("mob").value;
+  var i;
+
+  if (m == "") {
+    document.getElementById("msg").innerHTML = "Enter mobile number";
+    return;
+  }
+
+  for (i = 0; i < m.length; i++) {
+    if (m[i] < '0' || m[i] > '9') {
+      document.getElementById("msg").innerHTML = "Only numbers allowed";
+      return;
+    }
+  }
+
+  if (m.length != 10) {
+    document.getElementById("msg").innerHTML = "Mobile number must be 10 digits";
+  } else {
+    document.getElementById("msg").innerHTML = "Valid mobile number";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>email validation</title>
+</head>
+<body>
+
+<h3>Enter email</h3>
+<form onsubmit="return check()">
+  Email:
+  <input type="text" id="email">
+  <span id="msg" style="color:red"></span><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+function check() {
+  var e = document.getElementById("email").value;
+
+  if (e == "") {
+    document.getElementById("msg").innerHTML = "Enter email";
+    return false;
+  }
+  else if (e.indexOf("@") == -1 || e.indexOf(".") == -1) {
+    document.getElementById("msg").innerHTML = "Invalid email";
+    return false;
+  }
+  else {
+    document.getElementById("msg").innerHTML = "";
+    return true;
+  }
+}
+</script>
+
+</body>
+</html>
